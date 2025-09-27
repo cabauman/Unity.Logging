@@ -1,0 +1,35 @@
+name: Run Tests
+
+on:
+  workflow_dispatch:
+
+jobs:
+  tests:
+    runs-on: [self-hosted, Linux]
+    steps:
+      - name: checkout
+        # v4 not supported by our self-hosted runner
+        uses: actions/checkout@v3
+
+      # Workaround for limitation mentioned here: https://game.ci/docs/github/test-runner/#testing-unity-packages
+      - name: copy dir to new dir
+        run: |
+          # Print current directory
+          pwd
+          # Extract current folder name
+          folderName=$(echo "${PWD##*/}")
+          # Copy contents of GITHUB_WORKSPACE to a new directory called "copiedProject"
+          rsync -r "$GITHUB_WORKSPACE" "copiedProject"
+          # List contents of the newly created directory with the original folder's content
+          ls -F "copiedProject/$folderName"
+
+      # v4 not supported by our self-hosted runner
+      - uses: game-ci/unity-test-runner@v3
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_SERIAL }}
+          UNITY_EMAIL: ${{ secrets.UNITY_USERNAME }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        with:
+          packageMode: true
+          unityVersion: 2022.3.6f1
+          projectPath: ./copiedProject/com.gamector.ulogging

@@ -1,0 +1,17 @@
+{
+  "name": "com.gamector.ulogging",
+  "displayName": "GameCtor.Logging",
+  "version": "0.1.0",
+  "unity": "2020.3",
+  "description": "A minimalistic logging solution",
+  "keywords": [
+    "logging"
+  ],
+  "dependencies": {
+    "com.unity.nuget.newtonsoft-json": "3.2.1"
+  },
+  "author": {
+    "name": "Colt Alan Bauman",
+    "url": "https://github.com/cabauman"
+  }
+}

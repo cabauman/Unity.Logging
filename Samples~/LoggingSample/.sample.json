@@ -1,0 +1,5 @@
+{
+	"displayName":"Logging Sample",
+	"description": "Showcases the different logging levels and output",
+	"createSeparatePackage": false
+}
