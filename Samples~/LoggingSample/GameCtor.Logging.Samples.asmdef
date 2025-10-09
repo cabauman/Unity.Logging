@@ -1,6 +1,6 @@
 {
-    "name": "Sol.Logging.Samples",
-    "rootNamespace": "Sol.Logging.Samples",
+    "name": "GameCtor.Logging.Samples",
+    "rootNamespace": "GameCtor.Logging.Samples",
     "references": [
         "GUID:46c48b811d725bf4cb6765cf7e2fa739"
     ],

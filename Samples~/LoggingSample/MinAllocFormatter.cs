@@ -1,8 +1,8 @@
 using System;
 using System.IO;
-using static Sol.ULogging.ULogFormatHelpers;
+using static GameCtor.ULogging.ULogFormatHelpers;
 
-namespace Sol.ULogging
+namespace GameCtor.ULogging
 {
     /// <summary>
     /// A formatter with the following format:

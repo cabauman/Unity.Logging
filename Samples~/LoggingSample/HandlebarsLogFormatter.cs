@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
-using static Sol.ULogging.ULogFormatHelpers;
+using static GameCtor.ULogging.ULogFormatHelpers;
 
-namespace Sol.ULogging
+namespace GameCtor.ULogging
 {
     /// <summary>
     /// A custom formatter that uses Handlebars.Net templating.

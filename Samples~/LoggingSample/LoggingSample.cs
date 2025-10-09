@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Sol.ULogging.Samples
+namespace GameCtor.ULogging.Samples
 {
     public class LoggingSample : MonoBehaviour
     {
