@@ -35,7 +35,7 @@ namespace GameCtor.ULogging
             _handlebarsTemplate ??= Handlebars.Compile(_template);
             LevelToLabelMap.TryGetValue(logLevel, out var levelLabel);
             var start = filePath.LastIndexOf(Path.DirectorySeparatorChar) + 1;
-            var fileName = filePath.Substring(start, filePath.Length - start);
+            var fileName = filePath.Substring(start);
             string payloadString = GetPayloadString(payload, "\npayload: ");
 
             _dataMap["logLevel"] = levelLabel;
